@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4C19C4A81F5324BB00D7CF7F"
-               BuildableName = "Propell.app"
-               BlueprintName = "Propell"
-               ReferencedContainer = "container:Propell.xcodeproj">
+               BuildableName = "BallDrop.app"
+               BlueprintName = "BallDrop"
+               ReferencedContainer = "container:BallDrop.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4C19C4A81F5324BB00D7CF7F"
-            BuildableName = "Propell.app"
-            BlueprintName = "Propell"
-            ReferencedContainer = "container:Propell.xcodeproj">
+            BuildableName = "BallDrop.app"
+            BlueprintName = "BallDrop"
+            ReferencedContainer = "container:BallDrop.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,11 +56,18 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4C19C4A81F5324BB00D7CF7F"
-            BuildableName = "Propell.app"
-            BlueprintName = "Propell"
-            ReferencedContainer = "container:Propell.xcodeproj">
+            BuildableName = "BallDrop.app"
+            BlueprintName = "BallDrop"
+            ReferencedContainer = "container:BallDrop.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "OS_ACTIVITY_MODE"
+            value = "disable"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -75,9 +82,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4C19C4A81F5324BB00D7CF7F"
-            BuildableName = "Propell.app"
-            BlueprintName = "Propell"
-            ReferencedContainer = "container:Propell.xcodeproj">
+            BuildableName = "BallDrop.app"
+            BlueprintName = "BallDrop"
+            ReferencedContainer = "container:BallDrop.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

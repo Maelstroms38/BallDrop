@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Propell
+//  BallDrop
 //
 //  Created by Michael Stromer on 8/27/17.
 //  Copyright © 2017 Michael Stromer. All rights reserved.
