@@ -22,11 +22,36 @@ struct PhysicsCategory {
 
 class GameScene: SKScene {
     
+    var levels: [Level] = []
+    
     override func didMove(to view: SKView) {
-        let scene = Level(size: CGSize(width: 1334, height: 750))
-        scene.scaleMode = .aspectFill
-        let reveal = SKTransition.crossFade(withDuration: 0.2)
-        self.view?.presentScene(scene, transition: reveal)
+        do {
+            if let file = Bundle.main.url(forResource: "levels", withExtension: "json") {
+                let data = try Data(contentsOf: file)
+                if let json = try JSONSerialization.jsonObject(with: data) as? [String: Any] {
+                    let sortedJson = json.sorted(by: { $0.key < $1.key })
+                    print(sortedJson)
+                    for (key, value) in sortedJson  {
+                        let levelNumber = Int(key) ?? 0
+                        if let levelDict = value as? [String : Any] {
+                            let info = LevelInfo(levelNumber: levelNumber, dict: levelDict)
+                            let scene = Level(size: CGSize(width: 1334, height: 750))
+                            scene.info = info
+                            scene.scaleMode = .aspectFill
+                            levels.append(scene)
+                        }
+                    }
+                    let reveal = SKTransition.crossFade(withDuration: 0.5)
+                    self.view?.presentScene(levels[0], transition: reveal)
+                }
+            }
+        } catch {
+            print("Error deserializing JSON: \(error)")
+        }
         
     }
+    func sortFunc(num1: Int, num2: Int) -> Bool {
+        return num1 < num2
+    }
+
 }

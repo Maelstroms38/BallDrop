@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C61B8BE1F6D9461003D06E9 /* levels.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C61B8BD1F6D9461003D06E9 /* levels.json */; };
 		4C9FB3561F53860800ACBAC5 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4C9FB3551F53860800ACBAC5 /* Actions.sks */; };
 		4C9FB3651F53861000ACBAC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9FB3571F53861000ACBAC5 /* AppDelegate.swift */; };
 		4C9FB3661F53861000ACBAC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C9FB3581F53861000ACBAC5 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		4C19C4A91F5324BB00D7CF7F /* BallDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BallDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C61B8BD1F6D9461003D06E9 /* levels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = levels.json; path = BallDrop/levels.json; sourceTree = SOURCE_ROOT; };
 		4C9FB3551F53860800ACBAC5 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = Actions.sks; path = BallDrop/Actions.sks; sourceTree = SOURCE_ROOT; };
 		4C9FB3571F53861000ACBAC5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = BallDrop/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		4C9FB3581F53861000ACBAC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = BallDrop/Assets.xcassets; sourceTree = SOURCE_ROOT; };
@@ -75,6 +77,7 @@
 				4C9FB35F1F53861000ACBAC5 /* GameScene.swift */,
 				4C9FB3601F53861000ACBAC5 /* GameViewController.swift */,
 				4C9FB3611F53861000ACBAC5 /* Info.plist */,
+				4C61B8BD1F6D9461003D06E9 /* levels.json */,
 				4C9FB3621F53861000ACBAC5 /* Level.swift */,
 				4C9FB3631F53861000ACBAC5 /* physicsGameBackgroundMusic.mp3 */,
 				4C9FB3641F53861000ACBAC5 /* popSound.mp3 */,
@@ -150,6 +153,7 @@
 				4C9FB3691F53861000ACBAC5 /* GameScene.sks in Resources */,
 				4C9FB3661F53861000ACBAC5 /* Assets.xcassets in Resources */,
 				4C9FB3561F53860800ACBAC5 /* Actions.sks in Resources */,
+				4C61B8BE1F6D9461003D06E9 /* levels.json in Resources */,
 				4C9FB3681F53861000ACBAC5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

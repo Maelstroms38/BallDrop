@@ -10,11 +10,27 @@ import Foundation
 import SpriteKit
 import AVFoundation
 
+struct LevelInfo {
+    let levelNumber : Int
+    let name : String
+    var objectDict : [[String:Any]] = []
+    
+    init(levelNumber: Int, dict: [String : Any])  {
+        self.levelNumber = levelNumber
+        self.name = dict["name"] as? String ?? "??"
+        self.objectDict =  dict["objects"] as? [[String : Any]] ?? []
+    }
+}
+
 class Level: SKScene, SKPhysicsContactDelegate {
     
     private var level = 1
     
+    var levels: [Level] = []
+    
     var gameIsPlaying = true
+    
+    var info: LevelInfo!
     
     var backgroundMusicPlayer = AVAudioPlayer()
     var timer = Timer()
@@ -30,6 +46,7 @@ class Level: SKScene, SKPhysicsContactDelegate {
     
     override func didMove(to view: SKView) {
         
+        playBackgroundMusic()
         updateBackground()
         setUpTimerLabel()
         setupNodes()
@@ -105,7 +122,9 @@ class Level: SKScene, SKPhysicsContactDelegate {
     }
 
     func setupNodes() {
+        print(self.info.levelNumber)
         print(self.level)
+        
         switch self.level {
         case 1:
             bowlingBall.position = CGPoint(x: self.size.width / 2, y: self.size.height * 0.85)
@@ -187,6 +206,42 @@ class Level: SKScene, SKPhysicsContactDelegate {
             ramp.physicsBody?.affectedByGravity = false
             ramp.physicsBody?.isDynamic = false
             addChild(ramp)
+            
+        case 3:
+            bowlingBall.position = CGPoint(x: self.size.width * 0.20, y: self.size.height * 0.85)
+            bowlingBall.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+            bowlingBall.setScale(0.5)
+            bowlingBall.zPosition = 1
+            bowlingBall.name = "ball"
+            bowlingBall.physicsBody = SKPhysicsBody(circleOfRadius: bowlingBall.size.width / 2)
+            bowlingBall.physicsBody?.categoryBitMask = PhysicsCategory.Ball
+            bowlingBall.physicsBody?.collisionBitMask = PhysicsCategory.Edge | PhysicsCategory.Block
+            bowlingBall.physicsBody?.contactTestBitMask = PhysicsCategory.Edge | PhysicsCategory.Switch | PhysicsCategory.Block
+            bowlingBall.physicsBody?.affectedByGravity = false
+            addChild(bowlingBall)
+            
+            redButton.position = CGPoint(x: self.size.width * 0.375, y: 20)
+            redButton.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+            redButton.setScale(0.6)
+            redButton.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 50, height: 50))
+            redButton.physicsBody?.affectedByGravity = false
+            redButton.physicsBody?.isDynamic = false
+            redButton.physicsBody?.categoryBitMask = PhysicsCategory.Switch
+            addChild(redButton)
+            
+            ramp.position = CGPoint(x: self.size.width - ramp.size.width / 2, y: ramp.size.height / 2 + 100)
+            ramp.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+            let offsetX = ramp.size.width * ramp.anchorPoint.x
+            let offsetY = ramp.size.height * ramp.anchorPoint.y
+            let path = CGMutablePath()
+            path.move(to: CGPoint(x: 4 - offsetX, y: 6 - offsetY))
+            path.addLine(to: CGPoint(x: 640 - offsetX, y: 640 - offsetY))
+            path.addLine(to: CGPoint(x: 640 - offsetX, y: 0 - offsetY))
+            path.closeSubpath()
+            ramp.physicsBody = SKPhysicsBody(polygonFrom: path)
+            ramp.physicsBody?.affectedByGravity = false
+            ramp.physicsBody?.isDynamic = false
+            addChild(ramp)
 
         default:
             break
@@ -197,6 +252,9 @@ class Level: SKScene, SKPhysicsContactDelegate {
         timer.invalidate()
         
         self.gameIsPlaying = false
+        backgroundMusicPlayer.stop()
+        
+        run(SKAction.playSoundFileNamed("popSound", waitForCompletion: false))
         
         let winLabel = SKLabelNode(fontNamed: "Menlo")
         winLabel.position = CGPoint(x: self.size.width/2, y: self.size.height / 4)
@@ -224,6 +282,7 @@ class Level: SKScene, SKPhysicsContactDelegate {
         timer.invalidate()
 
         self.gameIsPlaying = false
+        backgroundMusicPlayer.stop()
         
         let loseLabel = SKLabelNode(fontNamed: "Menlo")
         loseLabel.position = CGPoint(x: self.size.width/2, y: self.size.height / 4)
@@ -294,21 +353,24 @@ class Level: SKScene, SKPhysicsContactDelegate {
         case 1:
             let scene = Level(size: CGSize(width: 1334, height: 750))
             scene.level = level
+            scene.info = self.info
             scene.scaleMode = .aspectFill
-            let reveal = SKTransition.crossFade(withDuration: 0.2)
+            let reveal = SKTransition.crossFade(withDuration: 0.5)
             self.view?.presentScene(scene, transition: reveal)
             
         case 2:
             let scene = Level(size: CGSize(width: 1334, height: 750))
             scene.level = level
+            scene.info = self.info
             scene.scaleMode = .aspectFill
-            let reveal = SKTransition.doorsOpenHorizontal(withDuration: 0.2)
+            let reveal = SKTransition.doorsOpenHorizontal(withDuration: 0.5)
             self.view?.presentScene(scene, transition: reveal)
             
         case 3:
             let scene = Level(size: CGSize(width: 1334, height: 750))
             scene.level = level
-            let reveal = SKTransition.crossFade(withDuration: 0.2)
+            scene.info = self.info
+            let reveal = SKTransition.crossFade(withDuration: 0.5)
             self.view?.presentScene(scene, transition: reveal)
             
         default:
