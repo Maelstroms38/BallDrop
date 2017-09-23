@@ -1,0 +1,19 @@
+{
+    "tree_names": {
+        "colloquial": ["pine", "big green"],
+        "scientific": ["piniferous scientificus"]
+    },
+    "age": 121,
+    "family": 1,
+    "planted_at": "7-4-1896",
+    "leaves": [
+               {
+               "size": "large",
+               "is_attached": true
+               },
+               {
+               "size": "small",
+               "is_attached": false
+               }
+               ]
+}

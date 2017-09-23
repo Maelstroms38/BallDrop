@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C36A2EE1F76DE3B002D9AE7 /* Ladybug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36A2ED1F76DE3B002D9AE7 /* Ladybug.swift */; };
+		4C36A2F01F76DE4F002D9AE7 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4C36A2EF1F76DE4F002D9AE7 /* Podfile */; };
+		4C36A2F21F76E12D002D9AE7 /* trees.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C36A2F11F76E12D002D9AE7 /* trees.json */; };
+		4C36A2F41F76E59A002D9AE7 /* flights.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C36A2F31F76E59A002D9AE7 /* flights.json */; };
 		4C61B8BE1F6D9461003D06E9 /* levels.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C61B8BD1F6D9461003D06E9 /* levels.json */; };
 		4C9FB3561F53860800ACBAC5 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4C9FB3551F53860800ACBAC5 /* Actions.sks */; };
 		4C9FB3651F53861000ACBAC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9FB3571F53861000ACBAC5 /* AppDelegate.swift */; };
@@ -19,10 +23,16 @@
 		4C9FB36D1F53861000ACBAC5 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9FB3621F53861000ACBAC5 /* Level.swift */; };
 		4C9FB36E1F53861000ACBAC5 /* physicsGameBackgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C9FB3631F53861000ACBAC5 /* physicsGameBackgroundMusic.mp3 */; };
 		4C9FB36F1F53861000ACBAC5 /* popSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C9FB3641F53861000ACBAC5 /* popSound.mp3 */; };
+		5C739228F8B525FF6860543F /* Pods_BallDrop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE7927994552FEBE1768589 /* Pods_BallDrop.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A13A8F18321D3815F12741E /* Pods-BallDrop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BallDrop.release.xcconfig"; path = "BallDrop/Pods/Target Support Files/Pods-BallDrop/Pods-BallDrop.release.xcconfig"; sourceTree = "<group>"; };
 		4C19C4A91F5324BB00D7CF7F /* BallDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BallDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C36A2ED1F76DE3B002D9AE7 /* Ladybug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Ladybug.swift; path = BallDrop/Ladybug.swift; sourceTree = SOURCE_ROOT; };
+		4C36A2EF1F76DE4F002D9AE7 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = BallDrop/Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4C36A2F11F76E12D002D9AE7 /* trees.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = trees.json; path = BallDrop/trees.json; sourceTree = SOURCE_ROOT; };
+		4C36A2F31F76E59A002D9AE7 /* flights.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = flights.json; path = BallDrop/flights.json; sourceTree = SOURCE_ROOT; };
 		4C61B8BD1F6D9461003D06E9 /* levels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = levels.json; path = BallDrop/levels.json; sourceTree = SOURCE_ROOT; };
 		4C9FB3551F53860800ACBAC5 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = Actions.sks; path = BallDrop/Actions.sks; sourceTree = SOURCE_ROOT; };
 		4C9FB3571F53861000ACBAC5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = BallDrop/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
@@ -36,6 +46,8 @@
 		4C9FB3621F53861000ACBAC5 /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Level.swift; path = BallDrop/Level.swift; sourceTree = SOURCE_ROOT; };
 		4C9FB3631F53861000ACBAC5 /* physicsGameBackgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = physicsGameBackgroundMusic.mp3; path = BallDrop/physicsGameBackgroundMusic.mp3; sourceTree = SOURCE_ROOT; };
 		4C9FB3641F53861000ACBAC5 /* popSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = popSound.mp3; path = BallDrop/popSound.mp3; sourceTree = SOURCE_ROOT; };
+		5697A3986F503AE8E20F6E83 /* Pods-BallDrop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BallDrop.debug.xcconfig"; path = "BallDrop/Pods/Target Support Files/Pods-BallDrop/Pods-BallDrop.debug.xcconfig"; sourceTree = "<group>"; };
+		AAE7927994552FEBE1768589 /* Pods_BallDrop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BallDrop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +55,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C739228F8B525FF6860543F /* Pods_BallDrop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41B0D23FB1D5ADC28FB98293 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAE7927994552FEBE1768589 /* Pods_BallDrop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4C19C4A01F5324BB00D7CF7F = {
 			isa = PBXGroup;
 			children = (
 				4C19C4AB1F5324BB00D7CF7F /* BallDrop */,
 				4C19C4AA1F5324BB00D7CF7F /* Products */,
+				AC36CDA4DBA2BF6C93B99572 /* Pods */,
+				41B0D23FB1D5ADC28FB98293 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,12 +101,25 @@
 				4C9FB3601F53861000ACBAC5 /* GameViewController.swift */,
 				4C9FB3611F53861000ACBAC5 /* Info.plist */,
 				4C61B8BD1F6D9461003D06E9 /* levels.json */,
+				4C36A2F11F76E12D002D9AE7 /* trees.json */,
+				4C36A2F31F76E59A002D9AE7 /* flights.json */,
 				4C9FB3621F53861000ACBAC5 /* Level.swift */,
+				4C36A2ED1F76DE3B002D9AE7 /* Ladybug.swift */,
+				4C36A2EF1F76DE4F002D9AE7 /* Podfile */,
 				4C9FB3631F53861000ACBAC5 /* physicsGameBackgroundMusic.mp3 */,
 				4C9FB3641F53861000ACBAC5 /* popSound.mp3 */,
 			);
 			name = BallDrop;
 			path = Propell;
+			sourceTree = "<group>";
+		};
+		AC36CDA4DBA2BF6C93B99572 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5697A3986F503AE8E20F6E83 /* Pods-BallDrop.debug.xcconfig */,
+				4A13A8F18321D3815F12741E /* Pods-BallDrop.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,9 +129,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C19C4C11F5324BB00D7CF7F /* Build configuration list for PBXNativeTarget "BallDrop" */;
 			buildPhases = (
+				0F75756AF250319801709C4E /* [CP] Check Pods Manifest.lock */,
 				4C19C4A51F5324BB00D7CF7F /* Sources */,
 				4C19C4A61F5324BB00D7CF7F /* Frameworks */,
 				4C19C4A71F5324BB00D7CF7F /* Resources */,
+				5B225D124525B5D83D961556 /* [CP] Embed Pods Frameworks */,
+				0E0E814BFB51E2DAF067165C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,23 +187,75 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C9FB3671F53861000ACBAC5 /* LaunchScreen.storyboard in Resources */,
+				4C36A2F21F76E12D002D9AE7 /* trees.json in Resources */,
 				4C9FB36E1F53861000ACBAC5 /* physicsGameBackgroundMusic.mp3 in Resources */,
 				4C9FB36F1F53861000ACBAC5 /* popSound.mp3 in Resources */,
 				4C9FB3691F53861000ACBAC5 /* GameScene.sks in Resources */,
 				4C9FB3661F53861000ACBAC5 /* Assets.xcassets in Resources */,
 				4C9FB3561F53860800ACBAC5 /* Actions.sks in Resources */,
+				4C36A2F01F76DE4F002D9AE7 /* Podfile in Resources */,
 				4C61B8BE1F6D9461003D06E9 /* levels.json in Resources */,
+				4C36A2F41F76E59A002D9AE7 /* flights.json in Resources */,
 				4C9FB3681F53861000ACBAC5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0E0E814BFB51E2DAF067165C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/BallDrop/Pods/Target Support Files/Pods-BallDrop/Pods-BallDrop-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0F75756AF250319801709C4E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5B225D124525B5D83D961556 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/BallDrop/Pods/Target Support Files/Pods-BallDrop/Pods-BallDrop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4C19C4A51F5324BB00D7CF7F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C36A2EE1F76DE3B002D9AE7 /* Ladybug.swift in Sources */,
 				4C9FB36A1F53861000ACBAC5 /* GameScene.swift in Sources */,
 				4C9FB36B1F53861000ACBAC5 /* GameViewController.swift in Sources */,
 				4C9FB36D1F53861000ACBAC5 /* Level.swift in Sources */,
@@ -293,6 +384,7 @@
 		};
 		4C19C4C21F5324BB00D7CF7F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5697A3986F503AE8E20F6E83 /* Pods-BallDrop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -308,6 +400,7 @@
 		};
 		4C19C4C31F5324BB00D7CF7F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A13A8F18321D3815F12741E /* Pods-BallDrop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

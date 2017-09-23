@@ -25,8 +25,20 @@ class GameScene: SKScene {
     var levels: [Level] = []
     
     override func didMove(to view: SKView) {
+        //
+        // SAGA GAMING
+        // GAME ONE: Roll Out 
+        //
+        // Level selection screen from JSON data. Each level has a unique track to roll over.
+        // Each player controls a rollable machine that blasts its way to the finish! >>>>>>
+        
+        // 1) create each level, we can decode a JSON tree for the level section screen.
+        
+        // 2) THEN map each level to the starter levels bundle.
+        
+        // 3) If this is their first playthrough, show a "how to kickass" tutorial.
         do {
-            if let file = Bundle.main.url(forResource: "levels", withExtension: "json") {
+            if let file = Bundle.main.url(forResource: "flights", withExtension: "json") {
                 let data = try Data(contentsOf: file)
                 if let json = try JSONSerialization.jsonObject(with: data) as? [String: Any] {
                     let sortedJson = json.sorted(by: { $0.key < $1.key })
@@ -41,8 +53,10 @@ class GameScene: SKScene {
                             levels.append(scene)
                         }
                     }
-                    let reveal = SKTransition.crossFade(withDuration: 0.5)
-                    self.view?.presentScene(levels[0], transition: reveal)
+                    //Start the game, with the first level.
+                    
+                    //let reveal = SKTransition.crossFade(withDuration: 0.5)
+                    //self.view?.presentScene(levels[0], transition: reveal)
                 }
             }
         } catch {
@@ -52,6 +66,22 @@ class GameScene: SKScene {
     }
     func sortFunc(num1: Int, num2: Int) -> Bool {
         return num1 < num2
+    }
+    func jsonDecoable(withLadybug: Bool) {
+        if withLadybug {
+            if let file = Bundle.main.url(forResource: "flights", withExtension: "json") {
+                do {
+                    let data = try Data(contentsOf: file)
+                    let json = try JSONSerialization.jsonObject(with: data)
+                    let directFlight = try Flight(json: flightJSON)
+                    let flightWithLayover = try Array<Flight>(json: [flightJSON, directFlight, json])
+                    
+                    print(flightWithLayover)
+                } catch(let error) {
+                    print(error.localizedDescription)
+                }
+            }
+        }
     }
 
 }

@@ -32,6 +32,8 @@ class Level: SKScene, SKPhysicsContactDelegate {
     
     var info: LevelInfo!
     
+    var tree: Tree?
+    
     var backgroundMusicPlayer = AVAudioPlayer()
     var timer = Timer()
     var timeRemaining = 10
@@ -45,6 +47,7 @@ class Level: SKScene, SKPhysicsContactDelegate {
     let verticalBlock2 = SKSpriteNode(imageNamed: "verticalBlock")
     
     override func didMove(to view: SKView) {
+        
         
         playBackgroundMusic()
         updateBackground()

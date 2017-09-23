@@ -1,0 +1,6 @@
+platform :ios, '10.3'
+use_frameworks!
+project '/Users/michael/Swift/BallDrop/BallDrop.xcodeproj'
+target "BallDrop" do
+pod 'Ladybug', '~> 2.0.0'
+end

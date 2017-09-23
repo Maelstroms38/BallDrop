@@ -1,0 +1,6 @@
+framework module Ladybug {
+  umbrella header "Ladybug-umbrella.h"
+
+  export *
+  module * { export * }
+}
